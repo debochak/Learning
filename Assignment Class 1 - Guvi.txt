@@ -1,0 +1,49 @@
+Question 1 - HTTP1.1 vs HTTP2
+1. HTTP1.1 used Header file which is repeated and cannot be compressed
+HTTP2 on the other hand allows compression of the header file. Also, in case the header is getting repeated, the system has 
+a more effecient system to avoid sending it again and again.
+2. HTTP1.1 is limited by 6 smultaneous connections. HTTP2 however has a single connection where there are multiple streams 
+allowing multiple information to be transferred simultaneously.
+3. HTTP2 has functions which automatically send the CSS and JS files without waiting for requests from the client unlike 
+HTTP1.1 where there has to be request everytime
+
+
+Question 2 - 5 Differences between Browser JS and Node JS - 
+1. There are difference between existing default objects in Browser JS and Node JS due to their different objectives
+2. Browser JS requires headers whereas Node is headless
+3. In Node, the entire code must be kept in a module, whereas moduling is not 
+necessary in Browsers
+4. Node does not have document object cause it never has to render anything on a page
+5. Node doesnt have a predefined Window ovjects cause it does not have a window
+to draw anything, unlike the Browser where it is predefined global object with 
+has functions and attributes dealing with the window that has to be drawn.
+
+Question 3 - What happens when you type a URL in the address bar in the browser
+Below steps -
+1. The browser checks the cache for a DNR record to find the corresponding IP 
+address - first it checks browser cache, then OS cache, then router cache, and then
+lastly if it is still unable to locate then, ISP cache. 
+2. The broswer established TCP connection with the server
+3. The browser sends HTTP request to the webserver. The request will be for the 
+HTML file, CSS file and the JS file. 
+5. The server handles the request out and HTTP response
+6. The HTML file and CSS file will be processed by the Rendering machine, while
+the JS file will be processed by the JS engine.
+7. The browser displays the content.
+
+Question 4 -  Write a write up on Difference between copy by value and copy by reference.
+1. Copy by value takes place for a primitive data type where when we copy a value,
+the copied variable, copies only the value but the two variables are not
+connected to each other. So subsequently, if any further change takes place in any of the 
+variable, it does not affect the other variable.
+2. Copy by reference takes place for teh non-primitive data type where the values 
+are not directly copied. Rather the language itself assigns to the same memory
+location. Hence, since both the variables are pointing to the same memory location,
+a change in value of one, will reflect in a change in the value of other as well.
+
+Question 5 - How to copy by value a composite data type (array+objects)
+There are three methods of copying by value of a composite data type - 
+1. Spread syntax - Shallow Copy
+2. Using the oject.assign method - Shallow Copy
+3. Using the JSON.stringfy and JSON.parse method - Deep Copy
+
