@@ -1,0 +1,148 @@
+-----------Problem 0 Part A ------------
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+//   console.log(userInput);
+
+var cat = {name: "Fluffy",
+            activities: ["play", "eat cat food"],
+            catFriends: [
+                {
+                    name: "bar",
+                    activities: ["be grumpy","eat bread omblet"],
+                    weight:8,
+                    furcolor:"white",
+                },
+                {
+                    name: "foo",
+                    activities: ["sleep","pre-sleep naps"],
+                    weight:3
+                }
+                ],
+                
+};
+
+cat.name = "Fluffyy"
+cat.weight = 7;
+cat.height = 20;
+let totalweight = 0;
+// console.log(totalweight)
+let allactivities = [];
+allactivities = cat.activities;
+
+// console.log(allactivities)
+for (i=0;i<cat.catFriends.length;i++){
+    // console.log(i);
+    // console.log(cat.catFriends.length);
+    // console.log(cat.catFriends[1].activities);
+    console.log(cat.catFriends[i].activities);
+    console.log(cat.catFriends[i].name);
+    console.log(cat.catFriends[i].weight);
+    totalweight = totalweight+cat.catFriends[i].weight;
+    allactivities.push(cat.catFriends[i].activities);
+   
+}
+
+for (i=0;i<cat.catFriends.length;i++){
+    cat.catFriends[i].activities.push("watch");
+    cat.catFriends[i].activities.push("Study");
+}
+console.log(totalweight);
+console.log(allactivities);
+
+
+console.log(cat.catFriends[0].activities);
+console.log(cat.catFriends[1].activities);
+
+cat.catFriends[0].furcolor = "Red";
+
+
+console.log(cat);
+
+
+
+
+
+
+
+
+
+
+  //end-here
+});
+
+-----------Problem 0 Part B------------
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+//   console.log(userInput);
+
+var myCar = {make: "Bugatti",
+            model: "Bugatti La Voiture Noire",
+            year: 2019,
+            accidents: [
+                         {
+                         date: "3/15/2019",
+                         damage_points: "5000",
+                         atFaultForAccident: true
+                         },
+                         {
+                         date: "7/4/2022",
+                         damage_points: "2200",
+                         atFaultForAccident: true
+                         },
+                         {
+                         date: "6/22/2021",
+                         damage_points: "7900",
+                         atFaultForAccident: true
+                         }
+                         ]
+}
+
+for(i=0;i<myCar.accidents.length;i++){
+    myCar.accidents[i].atFaultForAccident = false;
+    console.log(myCar.accidents[i].date);
+}
+//console.log(myCar);
+
+
+
+
+
+
+
+
+
+
+  //end-here
+});
